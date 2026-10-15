@@ -1,0 +1,5 @@
+const getSumAndAverage = arr => {
+    let sum = arr.reduce((acc, val) => acc + val, 0);
+    return { sum: sum, average: arr.length ? sum / arr.length : 0 };
+};
+console.log(getSumAndAverage([2, 4, 6]));

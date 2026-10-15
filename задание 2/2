@@ -1,0 +1,2 @@
+const getPositive = arr => arr.filter(num => num > 0);
+console.log(getPositive([-5, 3, -1, 10, 0, 2]));

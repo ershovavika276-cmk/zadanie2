@@ -1,0 +1,5 @@
+function getSecondLargest(arr) {
+    let uniq = [...new Set(arr)].sort((a, b) => b - a);
+    return uniq.length >= 2 ? uniq[1] : null;
+}
+console.log(getSecondLargest([10, 5, 10, 20, 15]));

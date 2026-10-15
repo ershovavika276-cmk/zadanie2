@@ -1,0 +1,4 @@
+function getShortName(surname, name, patronymic) {
+    return surname + " " + name[0] + ". " + patronymic[0] + ".";
+}
+console.log(getShortName("Иванов", "Иван", "Иванович"));

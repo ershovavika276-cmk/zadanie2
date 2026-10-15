@@ -1,0 +1,25 @@
+function groupByAge(people) {
+    return people.reduce((acc, person) => {
+        const age = person.age;
+        if (!acc[age]) {
+            acc[age] = [];
+        }
+        acc[age].push(person);
+        return acc;
+    }, {});
+}
+
+const peopleList = [
+    { name: 'Анастасия', age: 24 }, 
+    { name: 'Диана', age: 19 }, 
+    { name: 'Александр', age: 32 },
+];
+
+const groupedResult =groupByAge(peopleList);
+
+for (let age in groupedResult) {
+    console.log(`Возраст ${age}:`);
+    groupedResult[age].forEach(person => {
+        console.log(` Имя: ${person.name}`);
+    });
+}
